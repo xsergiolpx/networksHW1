@@ -1,9 +1,14 @@
-from sergio.pergraph import *
+#from sergio.pergraph import *
 def connectivityIrr(A):
-   #type A: (adjacency)matrix
-
+    '''
+        Check the connectivity of a graph 
+        :param A: adjacency matrix (nxn)
+        
+        :return: True if The adjacency matrix is irreducible (the graph is connected), False if not
+        '''
+    I=0
     for i in range(0, len(A)):
-       I=sum(A**i) #I+=A**i
+       I+=A**i
     if I>0:
         return True
         #print(' The adjacency matrix is irreducible,the graph is connected')
@@ -11,6 +16,3 @@ def connectivityIrr(A):
         return False
         #print(' The adjacency matrix is not irreducible,the graph is not connected')
 
-
-def connectivityLap(A):
-    L=(1/2)*A.transpose()*A
