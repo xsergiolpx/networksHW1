@@ -1,10 +1,6 @@
 import random
 import numpy as np
 
-# Number of nodes
-n = 100
-p = 0.5
-
 def create_graph(n):
     '''
     Creates a dictionary structure for n nodes {}
@@ -16,13 +12,15 @@ def create_graph(n):
         g[i] = []
     return g
 
-def er_graph(g, p):
+def er_graph(p, n):
     '''
     Create a graph of the ER type
     :param g: graph of the type {1: [2,3], 2: [1,3], ..., n: [1,3]}
     :param p: probability of creating a link
     :return: g modified
     '''
+    # create the nodes
+    g = create_graph(n)
     for i in g:
         for j in g:
             if j > i:
@@ -46,9 +44,6 @@ def graph_to_matrix(g):
             m[i,j] = 1
     return m
 
-# create the nodes
-g = create_graph(n)
 
 # Connect randomly the graph as ER
-g = er_graph(g, p)
-
+g = er_graph(p = 0.5, n = 100)
