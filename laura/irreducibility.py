@@ -1,10 +1,16 @@
-from sergio.pergraph import *
+import numpy as np
+from numpy import linalg as LA
 def connectivityIrr(A):
-   #type A: (adjacency)matrix
-
-    for i in range(0, len(A)):
-       I=sum(A**i) #I+=A**i
-    if I>0:
+    '''
+        Check the connectivity of a graph 
+        :param A: adjacency matrix (nxn)
+        
+        :return: True if The adjacency matrix is irreducible (the graph is connected), False if not
+        '''
+    I=np.identity(len(A))
+    for i in range(1, len(A)):
+       I+= LA.matrix_power(A,i)
+    if (I>0).all():
         return True
         #print(' The adjacency matrix is irreducible,the graph is connected')
     else:
@@ -12,5 +18,3 @@ def connectivityIrr(A):
         #print(' The adjacency matrix is not irreducible,the graph is not connected')
 
 
-def connectivityLap(A):
-    L=(1/2)*A.transpose()*A
