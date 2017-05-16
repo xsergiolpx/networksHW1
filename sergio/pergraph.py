@@ -31,6 +31,7 @@ def er_graph(p, n):
     return g
 
 def graph_to_matrix(g):
+
     '''
     Converts the graph g into a matrix m
     :param g: graph of the type {1: [2,3], 2: [1,3], ..., n: [1,3]}
@@ -46,4 +47,4 @@ def graph_to_matrix(g):
 
 
 # Connect randomly the graph as ER
-g = er_graph(p = 0.5, n = 100)
+# g = er_graph(p = 0.5, n = 100)
