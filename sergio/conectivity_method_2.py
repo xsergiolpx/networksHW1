@@ -29,18 +29,18 @@ def eigenvalues_connected(L):
     '''
     eigenvalues = np.linalg.eigvals(L)
     second_smallest = sorted(eigenvalues)[1]
-    if second_smallest > 0:
+    if second_smallest > 0.00000001:
         return True
     else:
         return False
 
 
 
-'''
+
 #Example:
 #Create a graph
 g = er_graph(p=0.5, n=5)
-
+#g={0: [2, 3], 1: [], 2: [0, 3, 4], 3: [0, 2], 4: [2]}
 #Get the matrix L
 
 L = matrix_L(g)
@@ -51,3 +51,4 @@ print(eigenvalues_connected(L))
 
 '''
 
+'''
