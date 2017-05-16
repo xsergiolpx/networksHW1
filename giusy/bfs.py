@@ -1,9 +1,16 @@
 from sergio.pergraph import *
+from laura.connectivityLap import *
+from laura.irreducibility import *
 g = er_graph(p = 0.5, n = 5 )
 
 print(g)
 
 def bfs(g,node):
+    '''
+    :param g: graph of the type {1: [2,3], 2: [1,3], ..., n: [1,3]}
+    :param node: a given node from which I want to verify the connection
+    :return: True if the graph is connected, False otherwise
+    '''
     Q=[node]
     S=[]
     S.append(node)
@@ -19,4 +26,8 @@ def bfs(g,node):
         connection=True
     return(connection)
 
+
+m=graph_to_matrix(g)
+print(connectivityLap(m))
+print(connectivityIrr(m))
 print(bfs(g,4))
