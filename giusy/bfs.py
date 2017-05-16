@@ -1,4 +1,5 @@
 from sergio.pergraph import *
+from sergio.conectivity_method_2 import *
 from laura.connectivityLap import *
 from laura.irreducibility import *
 g = er_graph(p = 0.5, n = 5 )
@@ -31,3 +32,5 @@ m=graph_to_matrix(g)
 print(connectivityLap(m))
 print(connectivityIrr(m))
 print(bfs(g,4))
+L = matrix_L(g)
+print(eigenvalues_connected(L))
