@@ -1,5 +1,5 @@
 # create the D matrix
-from pergraph import *
+from sergio.pergraph import *
 
 def matrix_d(g):
     '''
