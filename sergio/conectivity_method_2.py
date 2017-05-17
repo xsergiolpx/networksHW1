@@ -34,9 +34,7 @@ def eigenvalues_connected(L):
     else:
         return False
 
-
-
-
+    '''
 #Example:
 #Create a graph
 g = er_graph(p=0.5, n=5)
@@ -51,4 +49,3 @@ print(eigenvalues_connected(L))
 
 '''
 
-'''
