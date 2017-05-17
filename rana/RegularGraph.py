@@ -7,7 +7,8 @@ def regular_graph(n, r):
     #print("Product of vertices and neighbours must be an even number")
     #n = int(input("Enter number of vertices: "))
     #r = int(input("Enter number of neighbours: "))
-
+    n = int(n)
+    r = int(r)
     s = 0
 
     myDict = {}
