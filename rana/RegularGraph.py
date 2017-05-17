@@ -28,5 +28,5 @@ def regular_graph(n, r):
                     count[v] += 1
                     s = 1
 
-    print(count)
+    #print(count)
     return(myDict)
