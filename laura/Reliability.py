@@ -1,6 +1,6 @@
 from sergio.pergraph import *
 from giusy.bfs import *
-from laura.Throughput import *
+from rana.Throughput import *
 from laura.ciao import *
 from random import uniform
 import matplotlib.pyplot as plt
@@ -49,9 +49,13 @@ for i in np.arange(0 ,0.26,0.01):
     glb_er=matrix_to_graph(alb_er)
     th.append(Throughput(glb))
     th_er.append(Throughput(glb_er))
-
-plt.plot(th,label='regular')
-plt.plot(th_er,label='p-Erdos-Renyi')
+ 
+plt.title('Reliability performance: TH as a function of p')
+plt.ylabel('Throughput Performance')
+plt.xlabel('Probability that a link can break down in a graph')
+prob=np.arange(0 ,0.26,0.01)
+plt.plot(prob,th,label='r -regular random graph')
+plt.plot(prob,th_er,label='p-ER random graph')
 plt.legend( loc=2, borderaxespad=0.)
 plt.show()
-
+   
