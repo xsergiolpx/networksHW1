@@ -1,7 +1,7 @@
 from sergio.pergraph import *
 from giusy.bfs import *
 from laura.Throughput import *
-from laura.ciao import *
+from laura.ciao import * #rana regular graph
 from random import uniform
 import matplotlib.pyplot as plt
 
