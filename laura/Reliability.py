@@ -1,7 +1,7 @@
 from sergio.pergraph import *
 from giusy.bfs import *
 from rana.Throughput import *
-from laura.ciao import *
+from rana.regularGraph import *
 from random import uniform
 import matplotlib.pyplot as plt
 #we write a function that remove links from the adjacency matrix of a graph, given the probability that a link can break down
