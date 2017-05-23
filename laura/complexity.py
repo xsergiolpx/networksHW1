@@ -1,6 +1,6 @@
 # 4 Compare the complexity as a function of n of the methods above
-from pergraph import *
-from irreducibility import *
+from sergio.pergraph import *
+from laura.irreducibility import *
 import time
 import numpy as np
 import matplotlib.pyplot as plt
