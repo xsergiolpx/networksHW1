@@ -71,7 +71,7 @@ find_er = [] #to store standard deviation
 finm_th = [] #to store mean
 finm_er = [] #to store mean
 # we create graphs with the 2 networks model
-for k in range(0, 51):
+for k in range(0, 101):
     g = regular_graph(20, 8)
     g_er = er_graph(p=8 / (20 - 1), n=20)
     # we construct the adjacency matrix
@@ -106,8 +106,8 @@ find_er = standDev(fin_er)
 print(finm_th)
 print(find_th)
 
-std=find_th*2/50
-std_er=find_er*2/50
+std=find_th*2/100
+std_er=find_er*2/100
 
 plt.title('Reliability performance: TH as a function of p')
 plt.ylabel('Throughput Performance')
