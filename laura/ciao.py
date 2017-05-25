@@ -3,7 +3,7 @@ import networkx as nx
 
 n=10
 g=er_graph(0.5,n)
-sp= shortestPath(g, 0, n-1)
+sp= short_path(g, 2, 0, n-1):
 print(sp)
 
 a=graph_to_matrix(g)
