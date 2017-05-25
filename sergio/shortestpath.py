@@ -47,6 +47,18 @@ def convert_to_dij(g):
 
     return dic
 
+def dif_size(caminos, path):
+    if path is False:
+        return True
+    if len(caminos) is 0:
+        size = 1000
+    else:
+        size = len(caminos[0])
+    if size < len(path):
+        return True
+    else:
+        return False
+
 
 def short_path(g, l, node1, node2):
     gd = convert_to_dij(g)
@@ -56,7 +68,7 @@ def short_path(g, l, node1, node2):
         path = shortestPath(gd, node1, node2)
         #print(path)
         # Pop the nodes
-        if path is not False:
+        if path is not False and dif_size(caminos, path) is False:
             caminos.append(path[:])
             coun = coun + 1
             if len(path) > 2:
@@ -67,7 +79,7 @@ def short_path(g, l, node1, node2):
                 # it so the program works
                 delete_link(gd, node1, node2)
 
-        if path is False or coun is l:
+        if path is False or coun is l or dif_size(caminos, path) is True:
             # No more paths or we found l shortest paths
             return caminos
 
@@ -90,3 +102,4 @@ print(paths)
 
 # If we set l = 4 but there are only 3 disjoint paths, the output will be a list of 3 lists
 '''
+
