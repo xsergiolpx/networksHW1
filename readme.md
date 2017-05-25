@@ -8,9 +8,9 @@ Part 1:
 
 3.1: laura/irreducibility.py
 
-3.2:
+3.2: sergio/conectivity_method_2.py
 
-3.3: sergio/conectivity_method_2.py
+3.3: 
 
 4: laura/complexity.py
 
