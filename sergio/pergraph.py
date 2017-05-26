@@ -44,7 +44,3 @@ def graph_to_matrix(g):
         for j in l:
             m[i,j] = 1
     return m
-
-
-# Connect randomly the graph as ER
-# g = er_graph(p = 0.5, n = 100)
